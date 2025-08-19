@@ -119,11 +119,35 @@
             </div>
             <div class="w-48"></div>
             <div class="flex-1 text-left pl-8">
-              <a
-                href="#videos"
-                class="smooth-scroll-link text-white font-semibold text-lg hover:text-blue-100 transition duration-300"
-                >Galería de Videos</a
-              >
+              <!-- Menú desplegable para Galería de Videos -->
+              <div class="menu-dropdown-group">
+                <button
+                  class="text-white font-semibold text-lg hover:text-blue-100 transition duration-300 flex items-center"
+                >
+                  Galería de Videos
+                  <svg
+                    class="w-4 h-4 ml-1 transition-transform duration-300 arrow"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <div class="menu-dropdown">
+                  <a href="#" data-day="dia1" class="menu-dropdown-item day-link">Día 1</a>
+                  <a href="#" data-day="dia2" class="menu-dropdown-item day-link">Día 2</a>
+                  <a href="#" data-day="dia3" class="menu-dropdown-item day-link">Día 3</a>
+                  <a href="#" data-day="dia4" class="menu-dropdown-item day-link">Día 4</a>
+                  <a href="#" data-day="dia5" class="menu-dropdown-item day-link">Día 5</a>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -157,11 +181,57 @@
             class="smooth-scroll-link block text-white text-center py-3 text-lg hover:bg-blue-600 transition-colors duration-200"
             >Información</a
           >
-          <a
-            href="#videos"
-            class="smooth-scroll-link block text-white text-center py-3 text-lg hover:bg-blue-600 transition-colors duration-200"
-            >Galería de Videos</a
-          >
+          <!-- Menú desplegable móvil -->
+          <div>
+            <button
+              id="mobile-gallery-btn"
+              class="w-full text-white text-center py-3 text-lg hover:bg-blue-600 transition-colors duration-200 flex justify-center items-center"
+            >
+              Galería de Videos
+              <svg
+                id="mobile-gallery-arrow"
+                class="w-4 h-4 ml-2 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                ></path>
+              </svg>
+            </button>
+            <div id="mobile-gallery-submenu" class="hidden bg-blue-600/50">
+              <a
+                href="#" data-day="dia1"
+                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
+                >Día 1</a
+              >
+              <a
+                href="#" data-day="dia2"
+                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
+                >Día 2</a
+              >
+              <a
+                href="#" data-day="dia3"
+                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
+                >Día 3</a
+              >
+              <a
+                href="#" data-day="dia4"
+                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
+                >Día 4</a
+              >
+              <a
+                href="#" data-day="dia5"
+                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
+                >Día 5</a
+              >
+            </div>
+          </div>
         </div>
       </header>
 
