@@ -1,29 +1,27 @@
-<main class="pt-28 md:pt-40">
+<main>
   <!-- Sección Conferencia Completa -->
   <section id="conferencia-completa" class="py-16 sm:py-24">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">
         Conferencia Completa - Día 2
       </h2>
-      <div class="max-w-4xl mx-auto">
-        <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden">
-          <video
-            class="local-video"
-            src="/archivos/videos/dia1_conferencia.mp4"
-            poster="/archivos/videos/dia1_conferencia_poster.jpg"
-            preload="metadata"
-            controls
-          ></video>
-          <div class="center-overlay">
-            <div class="play-button-overlay">
-              <svg class="w-16 h-16 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+      <!-- Contenedor de la rejilla para las conferencias -->
+      <div class="grid grid-cols-1 gap-8 max-w-4xl mx-auto">
+        <!-- Video de Conferencia 1 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Plenaria Presencial: Dra. María Laura Miserendino: Bioindicadores de disturbios antrópicos en ecosistemas acuáticos patagónicos: un recorrido por nuevas y no tan nuevas problemáticas ambientales. </h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="hsZeOZaJlEk">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-8 h-8 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+              <!-- El botón de descarga se elimina ya que no aplica a videos de YouTube -->
             </div>
-            <a href="/archivos/videos/dia1_conferencia.mp4" download="Congreso_Limnologico_Dia1_Conferencia.mp4" class="download-button-text" aria-label="Descargar Video">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a.75.75 0 0 1 .75.75V11.25l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L8.22 10.34a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.25A.75.75 0 0 1 12 1.5Z"/><path d="M3.75 17.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"/></svg>
-              <span>Descargar</span>
-            </a>
           </div>
         </div>
+        
       </div>
     </div>
   </section>
@@ -32,36 +30,276 @@
   <section id="videos-cortos" class="bg-white py-16 sm:py-24">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">
-        Videos Cortos - Día 2
+        Fragmentos del Día
       </h2>
-      <!-- Rejilla de videos (igual que en index.html) -->
+      <!-- Rejilla de videos de 3 columnas -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+<!-- Video Corto 9 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Plenaria Virtual: Dr Andrés Cabañas.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="DEWw-swjo6w">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 8 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Mesa redonda híbrida: Especies invasoras como amenaza de la integridad funcional de los humedales.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="dVgJpWLwogc">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Video Corto 3 -->
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Sesión oral: Biogeoquimica de sistemas acuáticos.</h3>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="bWencXLVDCI">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Video Corto 1 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Sesión oral: Educación Ambiental.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="KmhApjIQDLQ">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 2 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Sesión oral: Ecología de poblaciones y comunidades acuáticas y servicios.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="mpHwerv7fmc">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Video Corto 6 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Mesa redonda: Restauración, rehabilitación y remediación de ecosistemas acuáticos y ribereños.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="WWfKudGKwgs">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Mini Curso: Análisis y calidad de las aguas.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="JE8Bb8MiBA8">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- Video Corto 10 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Café: momento de camaradería.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="E9cmWUPlQWI">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Video Corto 7 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Plenaria Presencial: Dra. María Laura Miserendino.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="mlwz-5XbNy0">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+        <!-- Video Corto 4 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Sesión de Póster.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="998rPbz03Pk">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 5 -->
+
+        <!-- Puedes agregar más videos cortos aquí -->
+      </div>
+    </div>
+  </section>
+
+  <section id="videos-cortos" class="bg-white py-16 sm:py-24">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">
+        Posters del Día
+      </h2>
+      <!-- Rejilla de videos de 3 columnas -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Video Corto 1 -->
-        <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden">
-          <video class="local-video" src="/archivos/videos/dia1_corto1.mp4" poster="/archivos/videos/dia1_corto1_poster.jpg" preload="metadata" controls></video>
-          <div class="center-overlay">
-            <div class="play-button-overlay">
-              <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 1.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="gT9tZ6B6HBc">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
             </div>
-            <a href="/archivos/videos/dia1_corto1.mp4" download="Congreso_Limnologico_Dia1_Corto1.mp4" class="download-button-text" aria-label="Descargar Video">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a.75.75 0 0 1 .75.75V11.25l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L8.22 10.34a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.25A.75.75 0 0 1 12 1.5Z"/><path d="M3.75 17.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"/></svg>
-              <span>Descargar</span>
-            </a>
           </div>
         </div>
+
         <!-- Video Corto 2 -->
-        <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden">
-          <video class="local-video" src="/archivos/videos/dia1_corto2.mp4" poster="/archivos/videos/dia1_corto2_poster.jpg" preload="metadata" controls></video>
-           <div class="center-overlay">
-            <div class="play-button-overlay">
-              <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 2.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="T7el_eeR-J4">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
             </div>
-            <a href="/archivos/videos/dia1_corto2.mp4" download="Congreso_Limnologico_Dia1_Corto2.mp4" class="download-button-text" aria-label="Descargar Video">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a.75.75 0 0 1 .75.75V11.25l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L8.22 10.34a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.25A.75.75 0 0 1 12 1.5Z"/><path d="M3.75 17.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"/></svg>
-              <span>Descargar</span>
-            </a>
           </div>
         </div>
+
+        <!-- Video Corto 3 -->
+        <div>
+          <h3 class="text-lg font-bold text-gray-800 text-center mb-4">Poster 3.</h3>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="SPCuuCy2Chc">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 4 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 4.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="QhYYN9bs8aU">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 5 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 5.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="7fWmSGoPMAc">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 6 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 6.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="OsNb0LhfWOQ">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 7 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 7.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="h4kNnoG7vFI">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 8 -->
+        <div>
+          <div>
+          <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Poster 8.</h3>
+          </div>
+          <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="24v4-Hesks4">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Puedes agregar más videos cortos aquí -->
       </div>
     </div>

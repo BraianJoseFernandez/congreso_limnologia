@@ -168,7 +168,6 @@ body {
     z-index: 10;
     display: flex;
     align-items: center;
-    gap: 1rem; /* Espacio entre el botón de play y el de descarga */
     
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -195,27 +194,6 @@ body {
     transition: background-color 0.3s ease;
 }
 
-/* Botón de Descarga (pequeño, con texto) */
-.download-button-text {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem; /* Espacio entre el ícono y el texto */
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 0.5rem 1rem; /* 8px vertical, 16px horizontal */
-    border-radius: 9999px; /* Píldora */
-    font-size: 0.875rem; /* 14px */
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-}
-
-.download-button-text .w-5 {
-    width: 1.25rem;
-    height: 1.25rem;
-}
-
-.download-button-text:hover,
 .play-button-overlay:hover {
     background-color: rgba(30, 136, 229, 0.9);
 }
@@ -258,4 +236,15 @@ body {
 
 .menu-dropdown-item:hover {
     background-color: #2563eb; /* Azul más oscuro al pasar el mouse */
+}
+
+/* --- Animación de Carga de Contenido (Fade-in/out) --- */
+/* Aplica una transición suave a la opacidad del contenedor de videos */
+#videos {
+    transition: opacity 0.4s ease-in-out;
+}
+
+/* Clase para ocultar el contenido durante la transición */
+#videos.fading {
+    opacity: 0;
 }

@@ -1,27 +1,38 @@
-<main class="pt-28 md:pt-40">
+<main>
   <!-- Sección Conferencia Completa -->
   <section id="conferencia-completa" class="py-16 sm:py-24">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">
-        Conferencia Completa - Día 1
+        Conferencias Completas - Día 1
       </h2>
-      <div class="max-w-4xl mx-auto">
-        <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden">
-          <video
-            class="local-video"
-            src="/archivos/videos/dia1_conferencia.mp4"
-            poster="/archivos/videos/dia1_conferencia_poster.jpg"
-            preload="metadata"
-            controls
-          ></video>
-          <div class="center-overlay">
-            <div class="play-button-overlay">
-              <svg class="w-16 h-16 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+      <!-- Contenedor de la rejilla para las conferencias -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-7xl mx-auto">
+        <!-- Video de Conferencia 1 -->
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Plenaria presencial: Dr. Juan José Neiff: “De la Limnología la Fluviología… un paseo por las aguas” </h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="6PFi88gZkb4">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-16 h-16 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+              <!-- El botón de descarga se elimina ya que no aplica a videos de YouTube -->
             </div>
-            <a href="/archivos/videos/dia1_conferencia.mp4" download="Congreso_Limnologico_Dia1_Conferencia.mp4" class="download-button-text" aria-label="Descargar Video">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a.75.75 0 0 1 .75.75V11.25l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L8.22 10.34a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.25A.75.75 0 0 1 12 1.5Z"/><path d="M3.75 17.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"/></svg>
-              <span>Descargar</span>
-            </a>
+          </div>
+        </div>
+        <!-- Video de Conferencia 2 -->
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Plenaria presencial: Dra. Julie Coetzee: “Ecological impact and efficacy of weed biological control in South Africa” </h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="L1gU3QTP5Ts">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-16 h-16 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+              <!-- El botón de descarga se elimina ya que no aplica a videos de YouTube -->
+            </div>
           </div>
         </div>
       </div>
@@ -32,37 +43,145 @@
   <section id="videos-cortos" class="bg-white py-16 sm:py-24">
     <div class="container mx-auto px-6">
       <h2 class="text-4xl font-bold text-gray-800 text-center mb-12">
-        Videos Cortos - Día 1
+        Fragmentos del Día
       </h2>
-      <!-- Rejilla de videos (igual que en index.html) -->
+      <!-- Rejilla de videos de 3 columnas -->
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Video Corto 1 -->
-        <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden">
-          <video class="local-video" src="/archivos/videos/dia1_corto1.mp4" poster="/archivos/videos/dia1_corto1_poster.jpg" preload="metadata" controls></video>
-          <div class="center-overlay">
-            <div class="play-button-overlay">
-              <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Acreditación.</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="XsJJCaaLEF4">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
             </div>
-            <a href="/archivos/videos/dia1_corto1.mp4" download="Congreso_Limnologico_Dia1_Corto1.mp4" class="download-button-text" aria-label="Descargar Video">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a.75.75 0 0 1 .75.75V11.25l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L8.22 10.34a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.25A.75.75 0 0 1 12 1.5Z"/><path d="M3.75 17.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"/></svg>
-              <span>Descargar</span>
-            </a>
           </div>
         </div>
+
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Acto de apertura.</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="OzHhV51Ktq8">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Lunch de Bienvenida</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="jJbv8qGJiVw">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+         <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Dr Neiff</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="Um9oavt53cg">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Sesión Oral: Biodiversidad y conservación de los ecosistemas acuáticos.</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="04mL6OaBmSE">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Sesión Oral: Ciencia ciudadana.</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="A6O0IiK6lck">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Mesa redonda: Problemáticas de ríos urbanos.</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="SDwGiuiWz3A">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Café con arte: lloronas de río.</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="GG72gDNz64Q">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Video Corto 9 -->
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Conferencia Dra Julie Coetzee</h3>
+          </div>
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="JRWxWT2eEuQ">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Video Corto 2 -->
-        <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden">
-          <video class="local-video" src="/archivos/videos/dia1_corto2.mp4" poster="/archivos/videos/dia1_corto2_poster.jpg" preload="metadata" controls></video>
-           <div class="center-overlay">
-            <div class="play-button-overlay">
-              <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
-            </div>
-            <a href="/archivos/videos/dia1_corto2.mp4" download="Congreso_Limnologico_Dia1_Corto2.mp4" class="download-button-text" aria-label="Descargar Video">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1.5a.75.75 0 0 1 .75.75V11.25l1.97-1.97a.75.75 0 1 1 1.06 1.06l-3.25 3.25a.75.75 0 0 1-1.06 0L8.22 10.34a.75.75 0 1 1 1.06-1.06l1.97 1.97V2.25A.75.75 0 0 1 12 1.5Z"/><path d="M3.75 17.25a.75.75 0 0 0 0 1.5h16.5a.75.75 0 0 0 0-1.5H3.75Z"/></svg>
-              <span>Descargar</span>
-            </a>
+        <div>
+          <div>
+            <h3 class="text-xl font-bold text-gray-800 text-center mb-4">Mini curso: zooplancton</h3>
           </div>
-        </div>
-        <!-- Puedes agregar más videos cortos aquí -->
+            <div class="video-wrapper show-overlays rounded-lg shadow-lg overflow-hidden" data-youtube-id="hU7Kxpl4Wos">
+            <div class="center-overlay">
+              <div class="play-button-overlay">
+                <svg class="w-12 h-12 ml-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.647c1.295.742 1.295 2.545 0 3.286L7.279 20.99c-1.25.717-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>        
+        <!-- Video Corto 10 -->
+        
       </div>
     </div>
   </section>

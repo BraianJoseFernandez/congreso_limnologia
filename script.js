@@ -41,44 +41,75 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // --- Lógica para el Modal de Video ---
+  const videoModal = document.getElementById('video-modal');
+  const modalContent = document.getElementById('modal-content');
+  const modalIframe = document.getElementById('modal-video-iframe');
+  const closeModalBtn = document.getElementById('modal-close-btn');
+
+  function openModal(youtubeId) {
+    if (!videoModal || !modalIframe) return;
+    
+    // Construye la URL de embed de YouTube con autoplay y sin videos relacionados
+    modalIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
+    videoModal.classList.remove('opacity-0', 'pointer-events-none');
+    modalContent.classList.remove('scale-95');
+    document.body.style.overflow = 'hidden'; // Evita el scroll del fondo
+  }
+
+  function closeModal() {
+    if (!videoModal || !modalIframe) return;
+
+    // Limpiar el src del iframe detiene la reproducción del video.
+    modalIframe.src = "";
+    videoModal.classList.add('opacity-0', 'pointer-events-none');
+    modalContent.classList.add('scale-95');
+    document.body.style.overflow = ''; // Restaura el scroll
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeModal);
+  }
+  if (videoModal) {
+    // Cierra el modal si se hace clic en el fondo (el backdrop)
+    videoModal.addEventListener('click', (e) => e.target === videoModal && closeModal());
+  }
+
   // --- FUNCIÓN PARA INICIALIZAR REPRODUCTORES DE VIDEO ---
   // Esta función se llamará cada vez que se cargue nuevo contenido de video.
   function initializeVideoPlayers() {
-    const videoWrappers = document.querySelectorAll(".video-wrapper");
+    const videoWrappers = document.querySelectorAll(".video-wrapper[data-youtube-id]");
     videoWrappers.forEach((wrapper) => {
-      const video = wrapper.querySelector("video.local-video");
       const playButtonOverlay = wrapper.querySelector(".play-button-overlay");
+      const youtubeId = wrapper.dataset.youtubeId;
 
-      if (video && playButtonOverlay) {
+      if (playButtonOverlay && youtubeId) {
         // Prevenir que múltiples listeners se agreguen al mismo botón
         const newPlayButton = playButtonOverlay.cloneNode(true);
         playButtonOverlay.parentNode.replaceChild(newPlayButton, playButtonOverlay);
 
-        newPlayButton.addEventListener("click", () => video.play());
-
-        video.addEventListener("play", () => wrapper.classList.remove("show-overlays"));
-        video.addEventListener("pause", () => {
-          if (video.currentTime > 0 && !video.ended) {
-            wrapper.classList.add("show-overlays");
-          }
-        });
-        video.addEventListener("ended", () => {
-          wrapper.classList.add("show-overlays");
-          video.currentTime = 0;
-          video.load();
+        newPlayButton.addEventListener("click", () => {
+          // Al hacer clic en el botón de play, abre el modal con el ID de YouTube
+          openModal(youtubeId);
         });
       }
     });
   }
 
   // --- FUNCIÓN PARA CARGAR CONTENIDO DEL DÍA (AJAX) ---
+  let isFirstLoad = true; // Flag para manejar la carga inicial de forma diferente
   async function loadDayContent(day) {
     const url = `dias_congreso/${day}.html`;
-    const targetContainer = document.getElementById('videos'); // La sección donde se cargará el contenido
+    const targetContainer = document.getElementById('videos');
     if (!targetContainer) return;
 
-    // Opcional: Mostrar un indicador de carga
-    targetContainer.innerHTML = '<div class="container mx-auto px-6 text-center"><p class="text-lg text-blue-600">Cargando contenido...</p></div>';
+    // 1. Inicia la animación de desvanecimiento (fade-out)
+    targetContainer.classList.add('fading');
+
+    // Espera a que termine el fade-out, pero no en la carga inicial
+    if (!isFirstLoad) {
+      await new Promise(resolve => setTimeout(resolve, 400)); // Coincide con la duración en CSS
+    }
 
     try {
       const response = await fetch(url);
@@ -87,18 +118,27 @@ document.addEventListener("DOMContentLoaded", () => {
       const html = await response.text();
       const parser = new DOMParser();
       const doc = parser.parseFromString(html, 'text/html');
-      const newContent = doc.querySelector('main'); // Extraemos solo el <main> del archivo del día
+      const newContent = doc.querySelector('main');
 
       if (newContent) {
+        // 2. Reemplaza el contenido (aún está invisible por la clase 'fading')
         targetContainer.innerHTML = newContent.innerHTML;
-        initializeVideoPlayers(); // Re-inicializamos los videos para el nuevo contenido
-        targetContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        initializeVideoPlayers();
+
+        // 3. Desplázate a la sección y haz que aparezca (fade-in)
+        if (!isFirstLoad) {
+          targetContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        targetContainer.classList.remove('fading'); // Quita la clase para iniciar el fade-in
       } else {
         throw new Error('El archivo del día no tiene el formato esperado.');
       }
     } catch (error) {
       console.error('Error al cargar el día:', error);
-      targetContainer.innerHTML = '<div class="container mx-auto px-6 text-center"><p class="text-red-500">Lo sentimos, no se pudo cargar el contenido.</p></div>';
+      targetContainer.innerHTML = '<div class="container mx-auto px-6 text-center py-16"><p class="text-red-500">Lo sentimos, no se pudo cargar el contenido.</p></div>';
+      targetContainer.classList.remove('fading'); // Muestra el mensaje de error con fade-in
+    } finally {
+      isFirstLoad = false; // Las cargas posteriores no son la primera
     }
   }
 
@@ -118,5 +158,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // --- INICIALIZACIÓN INICIAL ---
-  initializeVideoPlayers(); // Llama a la función para los videos que ya están en la página principal
+  const videosContainer = document.getElementById('videos');
+  if (videosContainer) {
+    // Prepara el contenedor para que comience invisible antes de la primera carga
+    videosContainer.classList.add('fading');
+  }
+  loadDayContent('dia1'); // Carga el contenido del día 1 por defecto al iniciar la página
 });
