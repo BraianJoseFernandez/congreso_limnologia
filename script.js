@@ -165,3 +165,9 @@ document.addEventListener("DOMContentLoaded", () => {
   }
   loadDayContent('dia1'); // Carga el contenido del día 1 por defecto al iniciar la página
 });
+
+// --- Animación de entrada al cargar la página ---
+// Espera a que todo el contenido de la página se cargue para iniciar la animación
+window.addEventListener("load", () => {
+  document.body.classList.add("page-loaded");
+});

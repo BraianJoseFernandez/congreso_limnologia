@@ -20,6 +20,18 @@
     />
 
     <link rel="stylesheet" href="styles.css" />
+    <noscript>
+      <style>
+        /* Muestra los elementos si JavaScript está deshabilitado */
+        .side-decoration,
+        header,
+        #logo-container,
+        main,
+        footer {
+          opacity: 1;
+        }
+      </style>
+    </noscript>
   </head>
   <body class="bg-blue-50">
     <div class="side-decoration left">
@@ -109,139 +121,18 @@
         <div
           class="container mx-auto px-6 h-28 flex justify-center items-center relative z-10"
         >
-          <div class="hidden md:flex justify-center items-center w-full">
-            <div class="flex-1 text-right pr-8 md:pr-0">
-              <a
-                href="#informacion"
-                class="smooth-scroll-link text-white font-semibold text-lg hover:text-blue-100 transition duration-300"
-                >Información</a
-              >
-            </div>
-            <div class="w-48"></div>
-            <div class="flex-1 text-left pl-8">
-              <!-- Menú desplegable para Galería de Videos -->
-              <div class="menu-dropdown-group">
-                <button
-                  class="text-white font-semibold text-lg hover:text-blue-100 transition duration-300 flex items-center"
-                >
-                  Galería de Videos
-                  <svg
-                    class="w-4 h-4 ml-1 transition-transform duration-300 arrow"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M19 9l-7 7-7-7"
-                    ></path>
-                  </svg>
-                </button>
-                <div class="menu-dropdown">
-                  <a href="#" data-day="dia1" class="menu-dropdown-item day-link">Día 1 - 28/07</a>
-                  <a href="#" data-day="dia2" class="menu-dropdown-item day-link">Día 2 - 29/07</a>
-                  <a href="#" data-day="dia3" class="menu-dropdown-item day-link">Día 3 - 30/07</a>
-                  <a href="#" data-day="dia4" class="menu-dropdown-item day-link">Día 4 - 31/07</a>
-                  <a href="#" data-day="dia5" class="menu-dropdown-item day-link">Día 5 - 01/08</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="md:hidden absolute left-6 top-1/2 -translate-y-1/2 z-10">
-            <button id="menu-btn" class="text-white focus:outline-none">
-              <svg
-                class="w-8 h-8"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
-              </svg>
-            </button>
-          </div>
         </div>
         <div class="wave wave-back"></div>
         <div class="wave"></div>
-        <div
-          id="mobile-menu"
-          class="md:hidden absolute w-full bg-blue-500/90 backdrop-blur-sm shadow-lg z-30 transition-all duration-300 ease-out opacity-0 -translate-y-4 pointer-events-none"
-        >
-          <a
-            href="#informacion"
-            class="smooth-scroll-link block text-white text-center py-3 text-lg hover:bg-blue-600 transition-colors duration-200"
-            >Información</a
-          >
-          <!-- Menú desplegable móvil -->
-          <div>
-            <button
-              id="mobile-gallery-btn"
-              class="w-full text-white text-center py-3 text-lg hover:bg-blue-600 transition-colors duration-200 flex justify-center items-center"
-            >
-              Galería de Videos
-              <svg
-                id="mobile-gallery-arrow"
-                class="w-4 h-4 ml-2 transition-transform duration-300"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M19 9l-7 7-7-7"
-                ></path>
-              </svg>
-            </button>
-            <div id="mobile-gallery-submenu" class="hidden bg-blue-600/50">
-              <a
-                href="#" data-day="dia1"
-                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
-                >Día 1 - 28/07</a
-              >
-              <a
-                href="#" data-day="dia2"
-                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
-                >Día 2 - 29/07</a
-              >
-              <a
-                href="#" data-day="dia3"
-                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
-                >Día 3 - 30/07</a
-              >
-              <a
-                href="#" data-day="dia4"
-                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
-                >Día 4 - 31/07</a
-              >
-              <a
-                href="#" data-day="dia5"
-                class="day-link block text-white text-center py-2 text-base hover:bg-blue-700 transition-colors duration-200"
-                >Día 5 - 01/08</a
-              >
-            </div>
-          </div>
-        </div>
       </header>
 
       <div
         id="logo-container"
-        class="absolute top-8 md:top-10 left-1/2 -translate-x-1/2 z-20"
+        class="flex justify-center items-center -mt-24 relative z-10"
       >
         <div
           id="logo"
-          class="logo-ripple-container w-40 h-40 md:w-48 md:h-48 bg-white rounded-full shadow-2xl border-4 border-white cursor-pointer flex items-center justify-center"
+          class="logo-ripple-container w-48 h-48 md:w-80 md:h-80 bg-white rounded-full shadow-2xl border-4 border-white cursor-pointer flex items-center justify-center"
         >
           <img
             src="/archivos/logos/Logo_color_CAL.png"
@@ -251,18 +142,62 @@
         </div>
       </div>
 
-      <main class="pt-28 md:pt-40">
-        <section id="informacion" class="py-16 sm:py-24">
+      <main>
+        <div class="pt-8 md:pt-12 pb-8">
+          <div
+            class="container mx-auto px-4 flex justify-center items-center flex-wrap gap-3 md:gap-4"
+          >
+            <a
+              href="#"
+              data-day="dia1"
+              class="day-link water-btn text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none"
+              >Día 1 - 28/07</a
+            >
+            <a
+              href="#"
+              data-day="dia2"
+              class="day-link water-btn text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none"
+              >Día 2 - 29/07</a
+            >
+            <a
+              href="#"
+              data-day="dia3"
+              class="day-link water-btn text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none"
+              >Día 3 - 30/07</a
+            >
+            <a
+              href="#"
+              data-day="dia4"
+              class="day-link water-btn text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none"
+              >Día 4 - 31/07</a
+            >
+            <a
+              href="#"
+              data-day="dia5"
+              class="day-link water-btn text-white font-bold py-3 px-6 rounded-full shadow-lg focus:outline-none"
+              >Día 5 - 01/08</a
+            >
+          </div>
+        </div>
+
+        <section id="informacion" class="pb-16 sm:pb-24">
           <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-gray-800 mb-6">
-              El Agua es Vida
+            <img
+              src="archivos/logos/cropped-logo-limno-nuevo-26.png"
+              alt=""
+              class="mx-auto mb-6"
+            />
+            <h2 class="text-6xl font-bold text-gray-800 mb-6">
+              XI Congreso Argentino de Limnología
+            </h2>
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">
+              El agua como recurso integrador entre ciencia y sociedad.
             </h2>
             <p class="max-w-3xl mx-auto text-lg text-gray-600 leading-relaxed">
-              Bienvenido a nuestro espacio dedicado al recurso más valioso de
-              nuestro planeta. El agua no solo es esencial para la supervivencia
-              humana, sino que es el pilar de los ecosistemas y el motor del
-              desarrollo. Aquí exploramos su importancia, los desafíos que
-              enfrentamos y cómo podemos protegerla.
+              Desde Corrientes, estamos muy complacidos de la organización del
+              XI Congreso Argentino de Limnología que, por primera vez se
+              realizó en nuestra ciudad la cual fue del 28 de julio al 1 de
+              agosto de 2025.
             </p>
           </div>
         </section>
@@ -281,14 +216,32 @@
     </div>
 
     <!-- Modal para el reproductor de video -->
-    <div id="video-modal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none transition-opacity duration-300">
-      <div id="modal-content" class="bg-black rounded-lg shadow-2xl w-full max-w-5xl relative transform scale-95 transition-all duration-300">
+    <div
+      id="video-modal"
+      class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 opacity-0 pointer-events-none transition-opacity duration-300"
+    >
+      <div
+        id="modal-content"
+        class="bg-black rounded-lg shadow-2xl w-full max-w-5xl relative transform scale-95 transition-all duration-300"
+      >
         <!-- Contenedor del iframe para mantener la proporción 16:9 -->
-        <div class="relative" style="padding-bottom: 56.25%;"> <!-- Proporción 16:9 -->
-          <iframe id="modal-video-iframe" class="absolute top-0 left-0 w-full h-full" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        <div class="relative" style="padding-bottom: 56.25%">
+          <!-- Proporción 16:9 -->
+          <iframe
+            id="modal-video-iframe"
+            class="absolute top-0 left-0 w-full h-full"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
         <!-- Botón para cerrar el modal -->
-        <button id="modal-close-btn" class="absolute -top-3 -right-3 md:-top-4 md:-right-4 text-white bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold hover:bg-red-600 transition-colors duration-200 z-10">&times;</button>
+        <button
+          id="modal-close-btn"
+          class="absolute -top-3 -right-3 md:-top-4 md:-right-4 text-white bg-gray-800 rounded-full w-10 h-10 flex items-center justify-center text-2xl font-bold hover:bg-red-600 transition-colors duration-200 z-10"
+        >
+          &times;
+        </button>
       </div>
     </div>
 
